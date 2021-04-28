@@ -1,0 +1,44 @@
+﻿<Page x:Class="teleWeb2.SignInWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:teleWeb2"
+        mc:Ignorable="d"
+      d:DesignHeight="600" d:DesignWidth="1000"
+        Title="SignInWindow" >
+    <Grid Background="#FF919191">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="64*"></RowDefinition>
+            <RowDefinition Height="64*"></RowDefinition>
+            <RowDefinition Height="64*"></RowDefinition>
+            <RowDefinition Height="64*"></RowDefinition>
+            <RowDefinition Height="75*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Margin="73,35,137,47" Grid.Row="1" Text="Teleweb Вход" Foreground="#FF673AB7" FontSize="24" FontWeight="Bold" Height="34" VerticalAlignment="Center" FontFamily="Bauhaus 93" Grid.ColumnSpan="2"/>
+        <Rectangle Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3" Panel.ZIndex="-1" Fill="White" RadiusY="30" RadiusX="30" Margin="50,0,50,113">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="10" Color="MediumPurple" ShadowDepth="0" />
+            </Rectangle.Effect>
+        </Rectangle>
+        <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Логин"  Grid.Column="1" Margin="73,3,73,77" Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="36" VerticalAlignment="Center"/>
+        <TextBox x:Name="passBox"  materialDesign:HintAssist.Hint="Пароль" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Margin="73,76,73,3"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="37" VerticalAlignment="Center" RenderTransformOrigin="0.499,0.446"/>
+        <Button x:Name="regButton"  Margin="0,31,73,47"  Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Background="#FF6B51AE" BorderBrush="{x:Null}" Foreground="White" FontSize="20" Height="38" VerticalAlignment="Center" HorizontalAlignment="Right" Width="148" Click="buttonRegClick" Grid.ColumnSpan="2">Регистрация</Button>
+        <materialDesign:TimePicker Margin="0,66,73,10" VerticalAlignment="Stretch" FontSize="20" Grid.Column="3" Grid.Row="3" RenderTransformOrigin="0.503,0.471"/>
+        <Button  x:Name="SignInbtn"   Content="Войти в кабинет" Grid.Column="1" Margin="73,71,0,10" Grid.Row="3" BorderBrush="#FF673AB7" Foreground="#FF673AB7" FontSize="15" Height="35" Background="{x:Null}" VerticalAlignment="Center" Cursor="Hand" HorizontalAlignment="Left" Width="296" Click="Button_Auth_Click" Grid.ColumnSpan="2" />
+
+
+    </Grid>
+</Page>
